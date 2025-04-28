@@ -3,7 +3,7 @@ package calculator.v1;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main {
+public class App {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -25,8 +25,6 @@ public class Main {
             }
             sc.nextLine();
 
-            System.out.print("사칙 연산 기호를 입력하세요(더하기 +, 빼기 -, 곱하기 *, 나누기 /): ");
-            String operator = sc.nextLine();
 
 
             System.out.print("두 번째 숫자를 입력하세요: ");
@@ -41,6 +39,8 @@ public class Main {
             }
             sc.nextLine();
 
+            System.out.print("사칙 연산 기호를 입력하세요(더하기 +, 빼기 -, 곱하기 *, 나누기 /): ");
+            String operator = sc.nextLine();
 
             if (operator.equals("+")) {
                 result = firstNum + secondNum;

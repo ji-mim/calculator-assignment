@@ -7,7 +7,7 @@ public class App {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Calculator calculator = new Calculator();
+        CalculatorLv2 calculatorLv2 = new CalculatorLv2();
         int result = 0;
 
         while (true) {
@@ -44,7 +44,7 @@ public class App {
             String operator = sc.nextLine();
 
             try {
-                result = calculator.calculate(firstNum, secondNum, operator);
+                result = calculatorLv2.calculate(firstNum, secondNum, operator);
             } catch (RuntimeException e) {
                 System.out.println(e.getMessage());
                 continue;
@@ -53,13 +53,13 @@ public class App {
 
             System.out.printf("계산 결과 %d %s %d = %d\n", firstNum, operator, secondNum , result);
 
-            System.out.println("계산 기록: " + calculator.getResultList());
+            System.out.println("계산 기록: " + calculatorLv2.getResultList());
 
             System.out.println("가장 오래된 계산 기록를 지우고 싶으시면 remove를 입력해주세요.(아나라면 엔터 입력)");
             if (sc.nextLine().equals("remove")) {
-                calculator.removeFirst();
+                calculatorLv2.removeFirst();
                 System.out.println("삭제가 완료 되었습니다.");
-                System.out.println("계산 기록: " + calculator.getResultList());
+                System.out.println("계산 기록: " + calculatorLv2.getResultList());
             }
 
 

@@ -3,7 +3,7 @@ package calculator.v2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Calculator {
+public class CalculatorLv2 {
 
     private List<Integer> resultList = new ArrayList<>();
 
